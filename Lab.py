@@ -31,11 +31,11 @@ print(' ')
 print("--- Пузырьком частично сортированный список из",l,"элементов ---")
 print(' ')
 a=[]
-for i in range (0,l):
+for i in range (0,l): #Создаем список из l элементов 
     a.append(random.randint(0,1000))  
 print(a)
 print(' ')
-for j in range (0,(len(a)//2)):
+for j in range (0,(len(a)//2)): #Сортируем список до половины
     for j in range (0,(len(a)//2)):
         if a[j]>a[j+1]:
             a[j+1], a[j] = a[j], a[j+1]
@@ -43,7 +43,7 @@ print(a)
 print(' ')
 s=0
 p=0
-for i in range (0,len(a)-1):
+for i in range (0,len(a)-1): 
     for j in range (0,len(a)-1):
         s+=1
         if a[j]>a[j+1]:
@@ -64,7 +64,7 @@ for i in range (0,l):
     a.append(random.randint(0,1000))  
 print(a)
 print(' ')
-a.sort()
+a.sort() #Сортируем список через вутреннюю функцию
 print(a)
 print(' ')
 s=0
@@ -89,14 +89,14 @@ print(' ')
 print("--- Вставками несортированный список из",l,"элементов ---")
 print(' ')
 a=[]
-for i in range (0,l):
+for i in range (0,l): 
     a.append(random.randint(0,1000))  
 print(a)
 print(' ')
 s=0
 p=0
-for i in range (1,len(a)):
-    for j in range (i,0,-1):
+for i in range (1,len(a)): #Сравниваем элементы и меняем местами    
+    for j in range (i,0,-1): 
         s+=1
         if a[j]<a[j-1]:
             a[j],a[j-1]=a[j-1],a[j]
